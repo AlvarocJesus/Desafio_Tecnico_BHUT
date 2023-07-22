@@ -14,7 +14,7 @@ const CarsSchema = new mongoose.Schema(
 		},
 
 		car_id: {
-			type: ObjectId,
+			type: Number, //ObjectId,
 			required: true,
 		},
 	},

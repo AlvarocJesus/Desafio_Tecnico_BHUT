@@ -1,6 +1,8 @@
+const Cars = require("./CarModel");
+
 class CarRepository {
 	async listAllCars() {
-		return [{}];
+		return await Cars.find();
 	}
 
 	async saveCar() {}
