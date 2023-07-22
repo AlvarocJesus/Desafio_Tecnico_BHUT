@@ -1,15 +1,20 @@
-const mongoose = require("mongoose");
-const { randomUUID } = require('crypto');
+const { default: mongoose } = require("mongoose");
 
-const CarsSchema = new mongoose.Schema({
-	id: {
-		type: "UUID",
-		default: () => randomUUID(),
-	},
+async function connection() {
+	try {
+		mongoose.set("strictQuery", false);
 
-	data_hora: mongoose.Schema.Types.Date,
+		await mongoose.connect(
+			`mongodb+srv://alvimcoelhojesus:pE1e7heMS1I3mE7U@cluster0.5n8bboh.mongodb.net/?retryWrites=true&w=majority`,
+			{
+				autoIndex: true
+			}
+		);
 
-	car_id: mongoose.Schema.Types.ObjectId,
-});
+		console.log("Connection successfully")
+	} catch (err) {
+		console.log(err);
+	}
+}
 
-module.exports = mongoose.model("Cars", CarsSchema);
+module.exports = connection;
