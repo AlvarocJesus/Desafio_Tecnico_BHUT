@@ -2,7 +2,11 @@ const Cars = require("./CarModel");
 
 class CarRepository {
 	async listAllCars() {
-		return await Cars.find();
+		try {
+			return await Cars.find();
+		} catch (err) {
+			throw new Error(err);
+		}
 	}
 
 	async saveCar() {}

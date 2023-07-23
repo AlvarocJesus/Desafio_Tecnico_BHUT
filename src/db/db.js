@@ -1,11 +1,12 @@
 const { default: mongoose } = require("mongoose");
+const config = require("../config/config");
 
 async function connection() {
 	try {
 		mongoose.set("strictQuery", false);
 
 		await mongoose.connect(
-			`mongodb+srv://alvimcoelhojesus:pE1e7heMS1I3mE7U@cluster0.5n8bboh.mongodb.net/?retryWrites=true&w=majority`,
+			`mongodb+srv://alvimcoelhojesus:${config.MONGO_PASSWORD}@cluster0.5n8bboh.mongodb.net/?retryWrites=true&w=majority`,
 			{
 				autoIndex: true
 			}
