@@ -1,3 +1,5 @@
+const LogsService = require("./LogsService");
+
 const logsService = new LogsService();
 
 class LogsController {

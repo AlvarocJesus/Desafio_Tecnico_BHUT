@@ -1,5 +1,4 @@
 const AxiosService = require("../service/axios");
-const Cars = require("./CarModel");
 
 class CarRepository {
 	constructor() {

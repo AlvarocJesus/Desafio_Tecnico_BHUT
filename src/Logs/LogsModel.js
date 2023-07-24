@@ -4,7 +4,7 @@ const { randomUUID } = require("crypto");
 const LogsSchema = new mongoose.Schema(
 	{
 		id: {
-			type: UUID,
+			type: mongoose.Schema.Types.UUID,
 			default: () => randomUUID(),
 		},
 

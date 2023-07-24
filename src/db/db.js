@@ -6,7 +6,7 @@ async function connection() {
 		mongoose.set("strictQuery", false);
 
 		await mongoose.connect(
-			`mongodb+srv://alvimcoelhojesus:${config.MONGO_PASSWORD}@cluster0.5n8bboh.mongodb.net/?retryWrites=true&w=majority`,
+			`mongodb+srv://alvimcoelhojesus:${config.MONGO_PASSWORD}@cluster0.5n8bboh.mongodb.net/?`,
 			{
 				autoIndex: true,
 			}
