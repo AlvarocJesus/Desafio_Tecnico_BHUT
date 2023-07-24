@@ -8,13 +8,13 @@ async function connection() {
 		await mongoose.connect(
 			`mongodb+srv://alvimcoelhojesus:${config.MONGO_PASSWORD}@cluster0.5n8bboh.mongodb.net/?retryWrites=true&w=majority`,
 			{
-				autoIndex: true
+				autoIndex: true,
 			}
 		);
 
-		console.log("Connection successfully")
+		console.log("Connection successfully");
 	} catch (err) {
-		console.log(err);
+		throw new Error(err);
 	}
 }
 

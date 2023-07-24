@@ -3,18 +3,8 @@ const { randomUUID } = require("crypto");
 
 const CarsSchema = new mongoose.Schema(
 	{
-		/* id: {
-		type: UUID,
-		default: () => randomUUID(),
-	}, */
-
 		data_hora: {
 			type: Date,
-			required: true,
-		},
-
-		car_id: {
-			type: Number, //ObjectId,
 			required: true,
 		},
 	},

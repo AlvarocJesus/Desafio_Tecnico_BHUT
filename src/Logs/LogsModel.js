@@ -3,10 +3,10 @@ const { randomUUID } = require("crypto");
 
 const LogsSchema = new mongoose.Schema(
 	{
-		/* id: {
-		type: UUID,
-		default: () => randomUUID(),
-	}, */
+		id: {
+			type: UUID,
+			default: () => randomUUID(),
+		},
 
 		data_hora: {
 			type: Date,
