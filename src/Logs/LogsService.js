@@ -9,8 +9,8 @@ class LogsService {
 		return await this.logsRepository.listLogs();
 	}
 
-	async saveCar(log) {
-		return await this.logsRepository.saveCar(car);
+	async saveLog(log) {
+		return await this.logsRepository.createLogs(log);
 	}
 }
 
