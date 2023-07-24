@@ -8,7 +8,7 @@ class CarRepository {
 
 	async listAllCars() {
 		try {
-			return await Cars.find();
+			return await this.axiosService.find();
 		} catch (err) {
 			throw new Error(err);
 		}
