@@ -10,8 +10,6 @@ class CarRepository {
 	}
 
 	async saveCar() {}
-
-	async listLogs() {}
 }
 
 module.exports = CarRepository;

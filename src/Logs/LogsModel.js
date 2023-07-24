@@ -8,8 +8,13 @@ const LogsSchema = new mongoose.Schema(
 		default: () => randomUUID(),
 	}, */
 
-		log: {
-			type: String,
+		data_hora: {
+			type: Date,
+			required: true,
+		},
+
+		car_id: {
+			type: Number, //ObjectId,
 			required: true,
 		},
 	},
