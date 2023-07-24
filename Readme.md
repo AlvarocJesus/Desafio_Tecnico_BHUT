@@ -43,10 +43,10 @@ MONGO_PASSWORD=pE1e7heMS1I3mE7U
 $ cd "diretório de sua preferencia"
 
 # Para fazer o download do projeto rode o comando abaixo
-$ git clone https://github.com/AlvarocJesus/Desafio_Tecnico_LinkApi.git
+$ git clone https://github.com/AlvarocJesus/Desafio_Tecnico_BHUT.git
 
 # Acesse a pasta do projeto
-$ cd Desafio_Tecnico_LinkApi
+$ cd Desafio_Tecnico_BHUT
 
 # Para instalar as dependências que serão usadas
 $ npm i ou npm install
