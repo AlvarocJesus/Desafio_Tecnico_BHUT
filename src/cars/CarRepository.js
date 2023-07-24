@@ -1,6 +1,11 @@
+const AxiosService = require("../service/axios");
 const Cars = require("./CarModel");
 
 class CarRepository {
+	constructor() {
+		this.axiosService = new AxiosService();
+	}
+
 	async listAllCars() {
 		try {
 			return await Cars.find();
@@ -9,7 +14,13 @@ class CarRepository {
 		}
 	}
 
-	async saveCar() {}
+	async saveCar(car) {
+		try {
+			return await this.axiosService.save(car)
+		} catch (err) {
+			throw new Error(err);
+		}
+	}
 }
 
 module.exports = CarRepository;

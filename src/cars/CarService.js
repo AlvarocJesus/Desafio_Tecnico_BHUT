@@ -1,4 +1,4 @@
-const CarRepository = require('./CarRepository')
+const CarRepository = require("./CarRepository");
 
 class CarService {
 	constructor() {
@@ -9,7 +9,9 @@ class CarService {
 		return await this.carRepository.listAllCars();
 	}
 
-	async saveCar() {}
+	async saveCar(car) {
+		return await this.carRepository.saveCar(car);
+	}
 
 	async listLogs() {}
 }
