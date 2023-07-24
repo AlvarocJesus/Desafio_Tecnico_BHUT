@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { randomUUID } = require("crypto");
+const mongoose = require('mongoose');
+const { randomUUID } = require('crypto');
 
 const LogsSchema = new mongoose.Schema(
 	{
@@ -13,13 +13,13 @@ const LogsSchema = new mongoose.Schema(
 		},
 
 		car_id: {
-			type: Number, //ObjectId,
+			type: Number, // ObjectId,
 			required: true,
 		},
 	},
 	{ timestamps: true }
 );
 
-const Logs = mongoose.model("Logs", LogsSchema);
+const Logs = mongoose.model('Logs', LogsSchema);
 
 module.exports = Logs;

@@ -1,17 +1,17 @@
-const express = require("express");
-require("express-async-error");
-const cors = require("cors");
-const routes = require("./routes");
-const connection = require("./db/db");
-const status = require("http-status");
-const APIError = require("./error/APIError");
+const express = require('express');
+require('express-async-error');
+const cors = require('cors');
+const status = require('http-status');
+const routes = require('./routes');
+const connection = require('./db/db');
+const APIError = require('./error/APIError');
 
 const app = express();
 const port = 3000 || process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
-app.use("/api", routes);
+app.use('/api', routes);
 
 connection();
 
@@ -28,4 +28,4 @@ connection();
 		.json({ result: error.message, message: status["500_MESSAGE"] });
 }); */
 
-app.listen(port, () => console.log("Server ir running..."));
+app.listen(port, () => console.log('Server ir running...'));

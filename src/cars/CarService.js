@@ -1,5 +1,5 @@
-const LogsService = require("../Logs/LogsService");
-const CarRepository = require("./CarRepository");
+const LogsService = require('../Logs/LogsService');
+const CarRepository = require('./CarRepository');
 
 class CarService {
 	constructor() {

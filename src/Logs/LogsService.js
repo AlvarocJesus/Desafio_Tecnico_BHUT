@@ -1,4 +1,4 @@
-const LogsRepository = require("./LogsRepository");
+const LogsRepository = require('./LogsRepository');
 
 class LogsService {
 	constructor() {

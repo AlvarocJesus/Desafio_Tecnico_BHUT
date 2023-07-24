@@ -1,4 +1,4 @@
-const LogsService = require("./LogsService");
+const LogsService = require('./LogsService');
 
 const logsService = new LogsService();
 

@@ -1,14 +1,11 @@
-const axios = require("axios").default;
+const axios = require('axios').default;
 
 class AxiosService {
 	async find() {
 		try {
-			const data = await axios.get(
-				"http://api-test.bhut.com.br:3000/api/cars",
-				{
-					headers: { Accept: "application/json" },
-				}
-			);
+			const data = await axios.get('http://api-test.bhut.com.br:3000/api/cars', {
+				headers: { Accept: 'application/json' },
+			});
 
 			console.log({ data: data.data });
 		} catch (err) {
@@ -18,13 +15,9 @@ class AxiosService {
 
 	async save(car) {
 		try {
-			const data = await axios.post(
-				"http://api-test.bhut.com.br:3000/api/cars",
-				car,
-				{
-					headers: { Accept: "application/json" },
-				}
-			);
+			const data = await axios.post('http://api-test.bhut.com.br:3000/api/cars', car, {
+				headers: { Accept: 'application/json' },
+			});
 
 			console.log({ data: data.data });
 		} catch (err) {

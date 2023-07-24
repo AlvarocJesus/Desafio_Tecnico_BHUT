@@ -1,4 +1,4 @@
-const CarService = require("./CarService");
+const CarService = require('./CarService');
 
 const carService = new CarService();
 
@@ -12,9 +12,9 @@ class CarController {
 	async saveCar(req, res) {
 		const car = req.body;
 
-		const carSaved = await carService.saveCar(car)
+		const carSaved = await carService.saveCar(car);
 
-		return res.json(carSaved)
+		return res.json(carSaved);
 	}
 
 	async listLogs() {}

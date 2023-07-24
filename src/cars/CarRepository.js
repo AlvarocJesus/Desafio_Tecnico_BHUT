@@ -1,4 +1,4 @@
-const AxiosService = require("../service/axios");
+const AxiosService = require('../service/axios');
 
 class CarRepository {
 	constructor() {
@@ -15,7 +15,7 @@ class CarRepository {
 
 	async saveCar(car) {
 		try {
-			return await this.axiosService.save(car)
+			return await this.axiosService.save(car);
 		} catch (err) {
 			throw new Error(err);
 		}

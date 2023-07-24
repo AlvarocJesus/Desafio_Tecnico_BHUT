@@ -1,4 +1,4 @@
-const Logs = require("./LogsModel");
+const Logs = require('./LogsModel');
 
 class LogsRepository {
 	async listLogs() {
