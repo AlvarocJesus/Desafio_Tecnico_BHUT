@@ -9,9 +9,9 @@ class LogsRepository {
 		}
 	}
 
-	async createLogs() {
+	async createLogs(log) {
 		try {
-			return await Logs.save();
+			return await Logs.save(log);
 		} catch (err) {
 			throw new Error(err);
 		}
