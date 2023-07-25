@@ -41,7 +41,7 @@ class CarService {
 	async registerHooks() {
 		return new Webhooks({
 			db: {
-				callback_hook: ['http://localhost:8005/webhook-client'],
+				callback_hook: ['http://localhost:3000/webhook-client'],
 			},
 		});
 	}
