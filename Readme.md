@@ -23,10 +23,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## Funcionalidades
 
-- [x] Listar todos os usuários com seus endereços e contatos
-- [x] Listando um único usuário
-- [x] Listando todos os endereços de um único usuário
-- [x] Listando todos os contatos de um único usuário
+- [x] Listar todos carros
+- [x] Cadastrar novos carros
+- [x] Listar logs do sistema
 
 ## Variáveis de ambiente
 
