@@ -1,7 +1,7 @@
-import { Router } from 'express';
-import CarController from './cars/CarController';
-import LogsController from './Logs/LogsController';
-import Logs from './Logs/LogsModel';
+const { Router } = require('express');
+const CarController = require('./cars/CarController');
+const LogsController = require('./Logs/LogsController');
+const Logs = require('./Logs/LogsModel');
 
 const routes = Router();
 const carController = new CarController();
@@ -18,4 +18,4 @@ routes.post('/webhook-client', async (req, res) => {
 	return res.status(200).end();
 });
 
-export default routes;
+module.exports = routes;

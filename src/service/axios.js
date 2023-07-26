@@ -1,7 +1,6 @@
-const { BASE_URL } = require('../config/config');
-
 // eslint-disable-next-line import/order
 const axios = require('axios').default;
+const { BASE_URL } = require('../config/config');
 
 class AxiosService {
 	async find() {

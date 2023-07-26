@@ -6,10 +6,10 @@ POST http://localhost:3000/api/createCar
 Content-Type: application/json
 
 {
-	"title" : "string",
-	"marca" : "string",
-	"preço" : "string",
-	"idade": 0
+	"title" : "Civic",
+	"brand" : "Honda",
+	"price" : "36.000.00",
+	"age": 2009
 }
 
 ### List logs
