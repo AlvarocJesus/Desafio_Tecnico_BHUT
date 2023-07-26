@@ -1,30 +1,32 @@
+const { BASE_URL } = require('../config/config');
+
+// eslint-disable-next-line import/order
 const axios = require('axios').default;
 
 class AxiosService {
 	async find() {
 		try {
-			const data = await axios.get('http://api-test.bhut.com.br:3000/api/cars', {
+			const data = await axios.get(`${BASE_URL}`, {
 				headers: { Accept: 'application/json' },
 			});
 
-			console.log({ data: data.data });
+			return data.data;
 		} catch (err) {
-			console.log({ err });
+			throw new Error(err);
 		}
 	}
 
 	async save(car) {
 		try {
-			const data = await axios.post('http://api-test.bhut.com.br:3000/api/cars', car, {
+			const data = await axios.post(`${BASE_URL}`, car, {
 				headers: { Accept: 'application/json' },
 			});
 
-			console.log({ data: data.data });
+			return data.data;
 		} catch (err) {
-			console.log({ err });
+			throw new Error(err);
 		}
 	}
 }
-// find();
 
 module.exports = AxiosService;

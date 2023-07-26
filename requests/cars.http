@@ -1,0 +1,16 @@
+### List All cars
+GET http://localhost:3000/api/listCars
+
+### Save new car
+POST http://localhost:3000/api/createCar
+Content-Type: application/json
+
+{
+	"title" : "string",
+	"marca" : "string",
+	"preço" : "string",
+	"idade": 0
+}
+
+### List logs
+GET http://localhost:3000/api/logs
