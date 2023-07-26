@@ -1,23 +1,18 @@
 const mongoose = require('mongoose');
-const { randomUUID } = require('crypto');
 
 const LogsSchema = new mongoose.Schema(
 	{
-		id: {
-			type: Number,
-		},
-
 		data_hora: {
 			type: Date,
 			required: true,
 		},
 
 		car_id: {
-			type: Number, // ObjectId,
+			type: mongoose.Schema.Types.ObjectId,
 			required: true,
 		},
 	},
-	{ timestamps: true }
+	{ timestamps: true, autoIndex: true }
 );
 
 const Logs = mongoose.model('Logs', LogsSchema);

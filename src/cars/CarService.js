@@ -18,17 +18,12 @@ class CarService {
 	async saveCar(car) {
 		const savedCar = await this.carRepository.saveCar(car);
 
-		await this.logsService.saveLog({
-			id: 1,
+		const log = await this.logsService.saveLog({
 			data_hora: Date.now(),
-			car_id: 2,
+			car_id: savedCar._id,
 		});
 
-		this.queue.enqueue({
-			id: 1,
-			data_hora: Date.now(),
-			car_id: 2,
-		});
+		this.queue.enqueue(log);
 
 		if (savedCar) {
 			const hooks = this.registerHooks();
