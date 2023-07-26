@@ -56,3 +56,10 @@ $ npm run start
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000/api>
 ```
+
+
+## Screenshots
+
+- Listando logs do sistema
+
+![Listagem logs](./doc/imgs/list_logs.png)
